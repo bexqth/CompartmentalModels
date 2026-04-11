@@ -1,0 +1,6 @@
+*.asv
+*.log
+bin/
+*.mex*
+slprj/
+.DS_Store
