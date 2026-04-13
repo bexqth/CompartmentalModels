@@ -20,9 +20,12 @@ R(1) = 0;
 % -> physical contant reduced by half
 % -> beta needs to be reduced by half 
 
+
 for t = 1:59
     if t == 13
         beta = beta / 2;
+        %after 2 days -> eliminate contant with anyone
+        beta = beta * (2/5);
     end
     S(t + 1) = S(t) - beta * S(t) * (I(t) / N);
     I(t + 1) = I(t) + beta * S(t) * (I(t) / N) - gama * I(t);
